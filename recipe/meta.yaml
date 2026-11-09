@@ -25,7 +25,7 @@ build:
 requirements:
   build:
     - make
-    - cmake
+    - cmake <4
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
