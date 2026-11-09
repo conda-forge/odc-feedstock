@@ -1,5 +1,5 @@
 {% set name = "odc" %}
-{% set version = "1.4.4" %}
+{% set version = "1.6.0" %}
 {% set ecbuild_version = "3.6.5" %}
 {% set eckit_version = "1.18.2" %}
 
@@ -16,16 +16,16 @@ source:
     sha256: 37b5b6ce9aa53f4def9da6f5401396c6876bd8d351f6b3c7a3c0cb5bf3fa0b7c
     folder: eckit
   - url: https://github.com/ecmwf/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 65cb7b491566d3de14b66741544360f20eaaf1a6d5a24af7d8b939dd50e26431
+    sha256: 7b214b1d347231dc356416fbad86bb0ac6fc741048ef0b8024d66ec38d7630be
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
     - make
-    - cmake
+    - cmake <4
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
